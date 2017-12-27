@@ -743,11 +743,11 @@
 function refreshData() {
     $("#ramdom1").addClass("animationcss")
         var js = $.post("../../6bro/GetJokes", '{"data":10}', function (result) {
-        //    alert(JSON.stringify(data))
-        setInterval(function(){ $("#ramdom1").removeClass("animationcss")})
+
+
 
         var data = JSON.parse(result)
-//        $("#joke1").text(data.data[0].content)
+
         $("#container").empty()
 
         for (var one in data.data) {
@@ -767,8 +767,9 @@ function refreshData() {
         }
 
         adjustHeightOfPage(1)
+            setInterval(function(){ $("#ramdom1").removeClass("animationcss")},1000)
     }).error( function () {
-            setInterval(function(){    $("#ramdom1").removeClass("animationcss")})
+            setInterval(function(){    $("#ramdom1").removeClass("animationcss")},500)
         })
 }
 
