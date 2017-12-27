@@ -21,6 +21,125 @@ body {
 	overflow-x: hidden;
 }
 
+
+.animationcss{
+
+	/* 设置默认样式，开启3d硬件加速 */
+	-webkit-transform:translate3d(0,0,0);
+	-moz-transform:translate3d(0,0,0);
+	transform:translate3d(0,0,0);
+	animation: play 0.5s infinite;
+	/* 设置动画，animation:动画名称 动画播放时长单位秒或微秒 动画播放的速度曲线linear为匀速 动画播放次数infinite为循环播放; */
+	/*-webkit-animation:play 1s linear infinite;*/
+	/*-moz-animation:play 1s linear infinite;*/
+	/*animation:play 1s linear infinite;*/
+}
+
+/*    animation  */
+@-webkit-keyframes play{
+	0%  {
+		/*
+        水平翻转
+        */
+		/*-webkit-transform:rotateY(0deg);*/
+
+        /*垂直翻转*/
+        /*-webkit-transform:rotateX(0deg);*/
+        /*顺时针旋转*/
+        /*-webkit-transform:rotate(5deg);*/
+        /*逆时针旋转*/
+        -webkit-transform:rotate(0deg);
+
+	}
+	50%  {
+		/*
+        水平翻转
+        */
+		/*-webkit-transform:rotateY(0deg);*/
+
+		/*垂直翻转*/
+		/*-webkit-transform:rotateX(0deg);*/
+		/*顺时针旋转*/
+		/*-webkit-transform:rotate(5deg);*/
+		/*逆时针旋转*/
+		-webkit-transform:rotate(40deg);
+
+	}
+	50%  {
+		/*
+        水平翻转
+        */
+		/*-webkit-transform:rotateY(0deg);*/
+
+		/*垂直翻转*/
+		/*-webkit-transform:rotateX(0deg);*/
+		/*顺时针旋转*/
+		/*-webkit-transform:rotate(5deg);*/
+		/*逆时针旋转*/
+		-webkit-transform:rotate(0deg);
+
+	}
+}
+@-moz-keyframes play{
+	0%  {
+        /*-moz-transform:rotateY(0deg);*/
+
+        /*-moz-transform:rotateX(0deg);*/
+        /*-moz-transform:rotate(0deg);*/
+        -moz-transform:rotate(0deg);
+
+	}
+	50%  {
+		/*-moz-transform:rotateY(0deg);*/
+
+		/*-moz-transform:rotateX(0deg);*/
+		/*-moz-transform:rotate(0deg);*/
+		-moz-transform:rotate(40deg);
+
+	}
+	100%  {
+		/*-moz-transform:rotateY(0deg);*/
+
+		/*-moz-transform:rotateX(0deg);*/
+		/*-moz-transform:rotate(0deg);*/
+		-moz-transform:rotate(0deg);
+
+	}
+}
+@keyframes play{
+	0%  {
+		/*transform:rotateY(0deg);*/
+
+        /*transform:rotateX(0deg);*/
+        /*transform:rotate(0deg);*/
+        transform:rotate(0deg);
+
+	}
+	50%  {
+		/*transform:rotateY(0deg);*/
+
+		/*transform:rotateX(0deg);*/
+		/*transform:rotate(0deg);*/
+		transform:rotate(40deg);
+
+	}
+	100%  {
+		/*transform:rotateY(0deg);*/
+
+		/*transform:rotateX(0deg);*/
+		/*transform:rotate(0deg);*/
+		transform:rotate(0deg);
+
+	}
+}
+
+
+
+
+
+
+
+
 ul { padding: 0; margin: 0; }
 figure { margin: 0; }
 p:last-child { margin-bottom: 0; }

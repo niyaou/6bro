@@ -61,7 +61,7 @@
                 <nav class="navbar">
                     <div class="tm-navbar-bg">
 
-                        <a class="navbar-brand text-uppercase" href="#"> <img src="img/radom1.png" onclick="refreshData()">溜不乐</a>
+                        <a class="navbar-brand text-uppercase" href="#"> <img id="ramdom1" src="img/radom1.png" onclick="refreshData()">溜不乐</a>
 
                         <button class="navbar-toggler hidden-lg-up" type="button" data-toggle="collapse" data-target="#tmNavbar">
                             &#9776;
@@ -741,11 +741,15 @@
 
 
 function refreshData() {
-    var js = $.post("../../6bro/GetJokes", '{"data":10}', function (result) {
+    $("#ramdom1").addClass("animationcss")
+        var js = $.post("../../6bro/GetJokes", '{"data":10}', function (result) {
         //    alert(JSON.stringify(data))
+        setInterval(function(){ $("#ramdom1").removeClass("animationcss")})
+
         var data = JSON.parse(result)
 //        $("#joke1").text(data.data[0].content)
         $("#container").empty()
+
         for (var one in data.data) {
 
 
@@ -763,7 +767,9 @@ function refreshData() {
         }
 
         adjustHeightOfPage(1)
-    })
+    }).error( function () {
+            setInterval(function(){    $("#ramdom1").removeClass("animationcss")})
+        })
 }
 
 refreshData()
