@@ -745,6 +745,7 @@ function refreshData() {
         //    alert(JSON.stringify(data))
         var data = JSON.parse(result)
         $("#joke1").text(data.data[0].content)
+        $("#container").clear()
         for (var one in data.data) {
 
 
