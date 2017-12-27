@@ -744,8 +744,8 @@ function refreshData() {
     var js = $.post("../../6bro/GetJokes", '{"data":10}', function (result) {
         //    alert(JSON.stringify(data))
         var data = JSON.parse(result)
-        $("#joke1").text(data.data[0].content)
-        $("#container").clear()
+//        $("#joke1").text(data.data[0].content)
+        $("#container").empty()
         for (var one in data.data) {
 
 
